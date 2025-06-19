@@ -1,0 +1,8 @@
+// heavy.worker.js
+globalThis.onmessage = function () {
+  let t = 0;
+  for (let i = 0; i < 1e8; i++) {
+    t += i;
+  }
+  globalThis.postMessage(t);
+};
